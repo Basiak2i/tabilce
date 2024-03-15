@@ -19,15 +19,16 @@ lista.forEach((el, i) => {
     li.classList.add("list-group-item")
     li.append(btn)
     display.append(li)
-    
 });
 
             dodaj.addEventListener('click', evt => {
 
                 let uzytkownik = {
+                    id: crypto.randomUUID(),
                     imie: imie.value,
                     miasto: miasto.value,
                     wiek: wiek.value
+                
                 }
                 lista.unshift(uzytkownik)
                 console.log(lista)
